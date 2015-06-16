@@ -1,0 +1,12 @@
+<Manifest>
+    <ScripterInstanceName>ReadJobToPrivateData</ScripterInstanceName>
+    <ScriptPackageFormatVersion>1.0</ScriptPackageFormatVersion>
+    <ScripterPassword></ScripterPassword>
+    <ScriptDeclarationFile>ReadJobToPrivateData.xml</ScriptDeclarationFile>
+    <ScriptProgramFiles>
+        <ScriptProgramFile ScriptLanguage="JavaScript">ReadJobToPrivateData.js</ScriptProgramFile>
+    </ScriptProgramFiles>
+    <ScriptIconFile></ScriptIconFile>
+    <AppleBinary></AppleBinary>
+    <LocalizationItems/>
+</Manifest>
