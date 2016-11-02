@@ -10,22 +10,27 @@ function jobArrived( s : Switch, job : Job )
 	} else {
 		var debug = false;
 	}
-	
+
 	var private_data_key = s.getPropertyValue('PrivateDataKey');
-		
+
 	if(job.isFile())
 	{
 		// Make temp file
 		var body_content = File.read(job.getPath(), "UTF-8");
-		
+
 		// Set to PD
 		job.setPrivateData(private_data_key, body_content);
-		
+
 		// Debug
-		if(debug) s.log(1, 'Body: ' + body_content);
-		
+		if(debug){
+			s.log(1, 'Body: ' + body_content);
+		}
+
 	} else {
 		// Not supporting folders
-		if(debug) s.log(2, 'Input job was folder.');
+		job.fail('Input job was folder.');
 	}
+
+	// Send along
+	job.sendToSingle(job.getPath());
 }
